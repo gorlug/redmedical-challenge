@@ -27,15 +27,15 @@ if (argv.length === 2) {
     process.exit(1);
 }
 unzip();
-const sentenceIndex = Number.parseInt(argv[2]);
-const wordIndex = Number.parseInt(argv[3]);
-const text = fs.readFileSync(__dirname + '/../unzipped.txt', 'utf-8');
+const sentenceIndex = Number.parseInt(argv[2]) - 1;
+const wordIndex = Number.parseInt(argv[3]) - 1;
+let text = fs.readFileSync(__dirname + '/../unzipped.txt', 'utf-8');
 const sentences = text.split('.');
 if (sentenceIndex >= sentences.length) {
     console.log('sentence index not available');
     process.exit(1);
 }
-const sentence = sentences[sentenceIndex];
+const sentence = sentences[sentenceIndex].trim();
 const words = sentence.split(' ');
 if (wordIndex >= words.length) {
     console.log('word index not available');
