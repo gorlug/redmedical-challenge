@@ -1,4 +1,9 @@
 # nodejs-challenge
+
+Run like this:
+
+`npm run start 2 1`
+
 ## Code Name RED
 
 Herzlichen Glückwunsch, Du erhältst heute unsere Coding Challenge! Weiter unten findest Du die Aufgaben-Stellung.
